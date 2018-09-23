@@ -1,0 +1,7 @@
+# Ignore dependency directory
+/node_modules
+
+# Annoying files
+.DS_Store
+._*
+Thumbs.db
