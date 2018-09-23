@@ -1,0 +1,220 @@
+/* variables */
+// colours
+$white: #fff;
+$containerShadow: #bfb9bf;
+$red: #fc5754;
+$yellow: #fdbd41;
+$green: #35cc4b;
+$lightGrey: #a9a9a9;
+$whisper: #eaeaea;
+$darkGrey: #292929;
+$orange: #f5923e;
+
+// mixins
+@import "mixins";
+
+.calc-container {
+  font-family: "Roboto";
+  height: 322px;
+  margin: 30px auto;
+  overflow: hidden;
+  width: 234px;
+
+  @include border-radius(5px);
+  @include box-shadow(0, 0, 40px, $containerShadow);
+}
+.calc-display {
+  background-color: $darkGrey;
+  font-size: 48px;
+  font-weight: 100;
+  height: 81px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+
+  @include border-radii(5px, 5px, 0, 0);
+}
+
+.calc-menu {
+  position: relative;
+
+  span {
+      position: absolute;
+      top: 5px;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+  }
+}
+
+.calc-menu {
+  span {
+    &.red {
+      background-color: $red;
+      left: 8px;
+    }
+
+    &.yellow {
+      background-color: $yellow;
+      left: 28px;
+    }
+
+    &.green {
+      background-color: $green;
+      left: 48px;
+    }
+  }
+}
+
+.calc-display-inner {
+  color: $white;
+  position: absolute;
+  bottom: 0.015em;
+  right: 0.35em;
+}
+.calc-board {
+  border-bottom: 1px solid $lightGrey;
+  border-left: 1px solid $lightGrey;
+  border-right: 1px solid $lightGrey;
+  font-weight: 400;
+  overflow: hidden;
+
+  @include border-radii(0, 0, 5px, 5px);
+}
+
+.calc-grid1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.button {
+  background-color: $whisper;
+  font-size: 20px;
+  height: 48px;
+  line-height: 47px;
+  text-align: center;
+
+  @include box-sizing();
+
+  &--operator {
+    background-color: $orange;
+    color: $white;
+    font-size: 1.6em;
+  }
+
+  &-zero {
+    border-right: 1px solid $lightGrey;
+    text-align: left;
+    padding-left: 1.2em;
+  }
+}
+
+.calc-grid1 {
+  .button {
+    border-bottom: 1px solid $lightGrey;
+
+    &:not(:nth-child(4n)) {
+      border-right: 1px solid $lightGrey;
+    }
+  }
+}
+
+.calc-grid2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+  .button:nth-child(2) {
+    border-right: 1px solid $lightGrey;
+  }
+}
+
+.js-font-size-90 {
+  font-size: 90%;
+}
+
+.js-font-size-81 {
+  font-size: 81%;
+}
+
+.js-font-size-72 {
+  font-size: 72%;
+}
+
+.js-font-size-64 {
+  font-size: 64%;
+}
+
+.js-font-size-60 {
+  font-size: 60%;
+}
+
+.js-font-size-55 {
+  font-size: 55%;
+}
+
+.js-font-size-52 {
+  font-size: 52%;
+}
+
+.js-font-size-48 {
+  font-size: 48%;
+}
+
+.js-font-size-45 {
+  font-size: 45%;
+}
+
+.js-font-size-42 {
+  font-size: 42%;
+}
+
+.js-font-size-40 {
+  font-size: 40%;
+}
+
+.js-font-size-38 {
+  font-size: 38%;
+}
+
+.js-font-size-36 {
+  font-size: 36%;
+}
+
+.js-font-size-34 {
+  font-size: 34%;
+}
+
+.js-font-size-32 {
+  font-size: 32%;
+}
+
+.js-font-size-28 {
+  font-size: 28%;
+}
+
+.js-font-size-26 {
+  font-size: 26%;
+}
+
+.js-font-size-22 {
+  font-size: 22%;
+}
+
+.js-font-size-21 {
+  font-size: 21%;
+}
+
+.js-font-size-19 {
+  font-size: 19%;
+}
+
+.js-font-size-17 {
+  font-size: 17%;
+}
+
+.js-font-size-14 {
+  font-size: 14%;
+}
+
+.js-active {
+  background-color: $lightGrey;
+}

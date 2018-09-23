@@ -1,0 +1,17 @@
+{
+  "name": "macos-calculator",
+  "version": "1.0.0",
+  "description": "Basic MacOS Calculator",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Damian Andrews",
+  "license": "ISC"
+}
